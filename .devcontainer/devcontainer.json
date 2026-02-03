@@ -1,0 +1,13 @@
+{
+  "name": "Material for MkDocs",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "forwardPorts": [8000],
+  "postCreateCommand": "mkdocs serve -a 0.0.0.0:8000",
+  "customizations": {
+    "vscode": {
+      "extensions": ["yzhang.markdown-all-in-one"]
+    }
+  }
+}
