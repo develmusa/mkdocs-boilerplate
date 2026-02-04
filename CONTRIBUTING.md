@@ -12,7 +12,7 @@ Scopes can be extended as the project grows. Current scopes:
 | `config` | Configuration files | [`mkdocs.yml`](mkdocs.yml) |
 | `theme` | Theme customization | [`docs/stylesheets/`](docs/stylesheets/), [`docs/javascripts/`](docs/javascripts/) |
 | `devcontainer` | Dev container setup | [`.devcontainer/`](.devcontainer/) |
-| `deps` | Dependencies | `requirements.txt`, `package.json` |
+| `deps` | Dependencies | [`pyproject.toml`](pyproject.toml), [`uv.lock`](uv.lock) |
 
 The commit template is configured automatically when using the devcontainer.
 
