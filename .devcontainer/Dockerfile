@@ -5,9 +5,15 @@ ENV UV_COMPILE_BYTECODE=1
 ENV UV_CACHE_DIR=/root/.cache/uv
 ENV PATH="/workspace/.venv/bin:$PATH"
 
+# Copy dependency files first for layer caching
+COPY pyproject.toml uv.lock ./
+
+# Install dependencies from lock file (reproducible)
 RUN --mount=type=cache,target=/root/.cache/uv \
-    uv venv /workspace/.venv && \
-    uv pip install mkdocs-material
+    uv sync --frozen --no-install-project
+
+# Copy the rest
+COPY . .
 
 RUN useradd -m -s /bin/bash mkdocs && \
     chown -R mkdocs:mkdocs /workspace
