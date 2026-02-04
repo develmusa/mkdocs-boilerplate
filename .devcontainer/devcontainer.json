@@ -5,9 +5,16 @@
   },
   "forwardPorts": [8000],
   "postCreateCommand": "mkdocs serve -a 0.0.0.0:8000",
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
   "customizations": {
     "vscode": {
-      "extensions": ["yzhang.markdown-all-in-one"]
+      "extensions": [
+        "yzhang.markdown-all-in-one",
+        "eamodio.gitlens",
+        "mhutchie.git-graph"
+      ]
     }
   }
 }
