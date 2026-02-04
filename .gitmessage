@@ -1,0 +1,4 @@
+type(scope): subject
+
+# Types: feat, fix, docs, style, refactor, perf, test, chore, ci, build, revert
+# Scopes: docs, config, theme, devcontainer, deps
